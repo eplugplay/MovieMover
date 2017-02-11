@@ -94,7 +94,7 @@ namespace MovieMover
                 {
                     if (movieInfo.copy)
                     {
-                        msg = "Copying: {0}To: {1}";
+                        msg = "Copying: {0}From: {1}To: {2}";
                         File.Copy(movieInfo.filePath, destinationFullPath);
                         if (movieInfo.extension.ToLower() == "mkv" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "avi" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "mp4" && !movieInfo.filename.Contains("sample") ||
                             movieInfo.extension.ToLower() == "mpeg" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "mpg" && !movieInfo.filename.Contains("sample") ||
@@ -105,7 +105,7 @@ namespace MovieMover
                     }
                     else
                     {
-                        msg = "Moving: {0}From: {1} To: {2}";
+                        msg = "Moving: {0}From: {1}To: {2}";
                         File.Move(movieInfo.filePath, destinationFullPath);
                         if (movieInfo.extension.ToLower() == "mkv" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "avi" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "mp4" && !movieInfo.filename.Contains("sample") ||
                             movieInfo.extension.ToLower() == "mpeg" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "mpg" && !movieInfo.filename.Contains("sample") ||
