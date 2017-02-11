@@ -41,6 +41,7 @@ namespace MovieMover
 
             txtSource.Text = Uti.ReadIniFile("Source", "path");
             txtDestination.Text = Uti.ReadIniFile("Destination", "path");
+            txtMessage.ReadOnly = true;
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)

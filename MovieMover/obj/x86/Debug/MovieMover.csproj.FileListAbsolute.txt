@@ -5,3 +5,10 @@ c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\ob
 c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\obj\x86\Debug\MovieMover.csproj.GenerateResource.Cache
 c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\obj\x86\Debug\MovieMover.exe
 c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\obj\x86\Debug\MovieMover.pdb
+C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMover.exe
+C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMover.pdb
+C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\bin\Debug\MovieMover.exe
+C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\bin\Debug\MovieMover.pdb
+C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMover.MainMenu.resources
+C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMover.Properties.Resources.resources
+C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMover.csproj.GenerateResource.Cache

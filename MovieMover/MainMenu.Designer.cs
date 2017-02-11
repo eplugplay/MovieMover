@@ -68,7 +68,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // lblSource
@@ -144,11 +144,11 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(35, 102);
+            this.txtMessage.Location = new System.Drawing.Point(15, 102);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.ReadOnly = true;
-            this.txtMessage.Size = new System.Drawing.Size(843, 483);
+            this.txtMessage.Size = new System.Drawing.Size(890, 483);
             this.txtMessage.TabIndex = 8;
             // 
             // rdMove
