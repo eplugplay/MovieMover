@@ -23,16 +23,15 @@ namespace MovieMover
                 try
                 {
                     string mainFolder = "";
-                    int cntDel = 0;
                     string[] subdirectoryEntries = Directory.GetDirectories(sourcePath, "*", System.IO.SearchOption.TopDirectoryOnly);
                     foreach (var dir in subdirectoryEntries)
                     {
+                        int cntDel = 0;
                         mainFolder = GetRootFolder(dir);
                         foreach (string fullpath in Directory.GetFiles(dir))
                         {
                             movieInfo = GetFileInfo(fullpath, sourcePath, destinationPath, logPath, copy);
-                            ExecuteMovies(movieInfo, txtMessage, mainFolder);
-                            cntDel++;
+                            cntDel = ExecuteMovies(movieInfo, txtMessage, mainFolder, cntDel);
                         }
                         string[] subFolders = Directory.GetDirectories(dir, "*", System.IO.SearchOption.AllDirectories);
                         foreach (var subDir in subFolders)
@@ -40,8 +39,7 @@ namespace MovieMover
                             foreach (string fullpath in Directory.GetFiles(subDir))
                             {
                                 movieInfo = GetFileInfo(fullpath, sourcePath, destinationPath, logPath, copy);
-                                ExecuteMovies(movieInfo, txtMessage, mainFolder);
-                                cntDel++;
+                                cntDel = ExecuteMovies(movieInfo, txtMessage, mainFolder, cntDel);
                             }
                         }
                         if (!movieInfo.copy)
@@ -51,7 +49,6 @@ namespace MovieMover
                                 Directory.Delete(dir, true);
                             }
                         }
-                        cntDel = 0;
                     }
                 }
                 catch (Exception e)
@@ -69,7 +66,7 @@ namespace MovieMover
             return pathWithoutRoot.Split(Path.DirectorySeparatorChar).Last(); 
         }
 
-        public static void ExecuteMovies(MovieInfo movieInfo, TextBox txtMessage, string mainFolder)
+        public static int ExecuteMovies(MovieInfo movieInfo, TextBox txtMessage, string mainFolder, int cntDel)
         {
             if (movieInfo.extension.ToLower() == "mkv" && !movieInfo.filename.Contains("sample") || movieInfo.extension == "srt" || movieInfo.extension == "sfv" || movieInfo.extension == "idx" ||
                 movieInfo.extension == "nfo" ||
@@ -93,30 +90,33 @@ namespace MovieMover
                 {
                     destinationFullPath = subDir + "\\" + movieInfo.filename + "_" + Guid.NewGuid() + "." + movieInfo.extension;
                 }
-                    try
+                try
+                {
+                    if (movieInfo.copy)
                     {
-                        if (movieInfo.copy)
-                        {
-                            msg = "Copying: {0}To: {1}";
-                            File.Copy(movieInfo.filePath, destinationFullPath);
-                        }
-                        else
-                        {
-                            msg = "Moving: {0}From: {1} To: {2}";
-                            File.Move(movieInfo.filePath, destinationFullPath);
-                        }
-                        msg = string.Format(msg, Environment.NewLine + "File : " + movieInfo.filename + "." + movieInfo.extension + Environment.NewLine,
-                        movieInfo.sourcePath + "\\" + mainFolder + Environment.NewLine,
-                        subDir + Environment.NewLine + Environment.NewLine);
-                        txtMessage.InvokeEx(x => x.Text += msg);
-                        Log(msg, movieInfo.logPath);
+                        msg = "Copying: {0}To: {1}";
+                        File.Copy(movieInfo.filePath, destinationFullPath);
+                        cntDel++;
                     }
-                    catch (Exception e)
+                    else
                     {
-                        Log("Failed: " + movieInfo.filename + "." + movieInfo.extension + Environment.NewLine, movieInfo.logPath);
-                        txtMessage.InvokeEx(x => x.Text += "Failed: " + movieInfo.filename + "." + movieInfo.extension + Environment.NewLine + Environment.NewLine);
+                        msg = "Moving: {0}From: {1} To: {2}";
+                        File.Move(movieInfo.filePath, destinationFullPath);
+                        cntDel++;
                     }
+                    msg = string.Format(msg, Environment.NewLine + "File : " + movieInfo.filename + "." + movieInfo.extension + Environment.NewLine,
+                    movieInfo.sourcePath + "\\" + mainFolder + Environment.NewLine,
+                    subDir + Environment.NewLine + Environment.NewLine);
+                    txtMessage.InvokeEx(x => x.Text += msg);
+                    Log(msg, movieInfo.logPath);
+                }
+                catch (Exception e)
+                {
+                    Log("Failed: " + movieInfo.filename + "." + movieInfo.extension + Environment.NewLine, movieInfo.logPath);
+                    txtMessage.InvokeEx(x => x.Text += "Failed: " + movieInfo.filename + "." + movieInfo.extension + Environment.NewLine + Environment.NewLine);
+                }
             }
+            return cntDel;
         }
 
         public static void Log(string msg, string path)
