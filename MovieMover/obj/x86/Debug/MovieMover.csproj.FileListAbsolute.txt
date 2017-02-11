@@ -1,0 +1,7 @@
+c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\bin\Debug\MovieMover.exe
+c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\bin\Debug\MovieMover.pdb
+c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\obj\x86\Debug\MovieMover.MainMenu.resources
+c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\obj\x86\Debug\MovieMover.Properties.Resources.resources
+c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\obj\x86\Debug\MovieMover.csproj.GenerateResource.Cache
+c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\obj\x86\Debug\MovieMover.exe
+c:\users\steve yi\documents\visual studio 2010\Projects\MovieMover\MovieMover\obj\x86\Debug\MovieMover.pdb
