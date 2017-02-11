@@ -96,13 +96,23 @@ namespace MovieMover
                     {
                         msg = "Copying: {0}To: {1}";
                         File.Copy(movieInfo.filePath, destinationFullPath);
-                        cntDel++;
+                        if (movieInfo.extension.ToLower() == "mkv" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "avi" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "mp4" && !movieInfo.filename.Contains("sample") ||
+                            movieInfo.extension.ToLower() == "mpeg" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "mpg" && !movieInfo.filename.Contains("sample") ||
+                            movieInfo.extension.ToLower() == "wmv" && !movieInfo.filename.Contains("sample"))
+                        {
+                            cntDel++;
+                        }
                     }
                     else
                     {
                         msg = "Moving: {0}From: {1} To: {2}";
                         File.Move(movieInfo.filePath, destinationFullPath);
-                        cntDel++;
+                        if (movieInfo.extension.ToLower() == "mkv" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "avi" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "mp4" && !movieInfo.filename.Contains("sample") ||
+                            movieInfo.extension.ToLower() == "mpeg" && !movieInfo.filename.Contains("sample") || movieInfo.extension.ToLower() == "mpg" && !movieInfo.filename.Contains("sample") ||
+                            movieInfo.extension.ToLower() == "wmv" && !movieInfo.filename.Contains("sample"))
+                        {
+                            cntDel++;
+                        }
                     }
                     msg = string.Format(msg, Environment.NewLine + "File : " + movieInfo.filename + "." + movieInfo.extension + Environment.NewLine,
                     movieInfo.sourcePath + "\\" + mainFolder + Environment.NewLine,
