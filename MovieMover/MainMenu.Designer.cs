@@ -45,6 +45,8 @@
             this.rdMove = new System.Windows.Forms.RadioButton();
             this.rdCopy = new System.Windows.Forms.RadioButton();
             this.gBox = new System.Windows.Forms.GroupBox();
+            this.btnOpenSource = new System.Windows.Forms.Button();
+            this.btnOpenDestination = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gBox.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +78,7 @@
             // lblSource
             // 
             this.lblSource.AutoSize = true;
-            this.lblSource.Location = new System.Drawing.Point(12, 22);
+            this.lblSource.Location = new System.Drawing.Point(19, 33);
             this.lblSource.Name = "lblSource";
             this.lblSource.Size = new System.Drawing.Size(41, 13);
             this.lblSource.TabIndex = 1;
@@ -84,7 +86,7 @@
             // 
             // txtSource
             // 
-            this.txtSource.Location = new System.Drawing.Point(59, 19);
+            this.txtSource.Location = new System.Drawing.Point(66, 30);
             this.txtSource.Name = "txtSource";
             this.txtSource.Size = new System.Drawing.Size(239, 20);
             this.txtSource.TabIndex = 2;
@@ -96,9 +98,9 @@
             // 
             // btnSourceBrowse
             // 
-            this.btnSourceBrowse.Location = new System.Drawing.Point(304, 16);
+            this.btnSourceBrowse.Location = new System.Drawing.Point(311, 28);
             this.btnSourceBrowse.Name = "btnSourceBrowse";
-            this.btnSourceBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnSourceBrowse.Size = new System.Drawing.Size(53, 23);
             this.btnSourceBrowse.TabIndex = 3;
             this.btnSourceBrowse.Text = "Browse";
             this.btnSourceBrowse.UseVisualStyleBackColor = true;
@@ -110,9 +112,9 @@
             // 
             // btnDestinationBrowse
             // 
-            this.btnDestinationBrowse.Location = new System.Drawing.Point(797, 15);
+            this.btnDestinationBrowse.Location = new System.Drawing.Point(757, 27);
             this.btnDestinationBrowse.Name = "btnDestinationBrowse";
-            this.btnDestinationBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnDestinationBrowse.Size = new System.Drawing.Size(53, 23);
             this.btnDestinationBrowse.TabIndex = 6;
             this.btnDestinationBrowse.Text = "Browse";
             this.btnDestinationBrowse.UseVisualStyleBackColor = true;
@@ -120,7 +122,7 @@
             // 
             // txtDestination
             // 
-            this.txtDestination.Location = new System.Drawing.Point(552, 18);
+            this.txtDestination.Location = new System.Drawing.Point(512, 29);
             this.txtDestination.Name = "txtDestination";
             this.txtDestination.Size = new System.Drawing.Size(239, 20);
             this.txtDestination.TabIndex = 5;
@@ -128,7 +130,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(483, 21);
+            this.label1.Location = new System.Drawing.Point(443, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 4;
@@ -146,17 +148,17 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(15, 102);
+            this.txtMessage.Location = new System.Drawing.Point(15, 126);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.ReadOnly = true;
-            this.txtMessage.Size = new System.Drawing.Size(890, 483);
+            this.txtMessage.Size = new System.Drawing.Size(890, 459);
             this.txtMessage.TabIndex = 8;
             // 
             // rdMove
             // 
             this.rdMove.AutoSize = true;
-            this.rdMove.Location = new System.Drawing.Point(765, 45);
+            this.rdMove.Location = new System.Drawing.Point(757, 56);
             this.rdMove.Name = "rdMove";
             this.rdMove.Size = new System.Drawing.Size(52, 17);
             this.rdMove.TabIndex = 9;
@@ -167,7 +169,7 @@
             // rdCopy
             // 
             this.rdCopy.AutoSize = true;
-            this.rdCopy.Location = new System.Drawing.Point(823, 45);
+            this.rdCopy.Location = new System.Drawing.Point(815, 56);
             this.rdCopy.Name = "rdCopy";
             this.rdCopy.Size = new System.Drawing.Size(49, 17);
             this.rdCopy.TabIndex = 10;
@@ -177,6 +179,8 @@
             // 
             // gBox
             // 
+            this.gBox.Controls.Add(this.btnOpenDestination);
+            this.gBox.Controls.Add(this.btnOpenSource);
             this.gBox.Controls.Add(this.txtSource);
             this.gBox.Controls.Add(this.rdCopy);
             this.gBox.Controls.Add(this.rdMove);
@@ -187,9 +191,29 @@
             this.gBox.Controls.Add(this.txtDestination);
             this.gBox.Location = new System.Drawing.Point(15, 27);
             this.gBox.Name = "gBox";
-            this.gBox.Size = new System.Drawing.Size(890, 69);
+            this.gBox.Size = new System.Drawing.Size(890, 93);
             this.gBox.TabIndex = 11;
             this.gBox.TabStop = false;
+            // 
+            // btnOpenSource
+            // 
+            this.btnOpenSource.Location = new System.Drawing.Point(370, 27);
+            this.btnOpenSource.Name = "btnOpenSource";
+            this.btnOpenSource.Size = new System.Drawing.Size(48, 23);
+            this.btnOpenSource.TabIndex = 11;
+            this.btnOpenSource.Text = "Open";
+            this.btnOpenSource.UseVisualStyleBackColor = true;
+            this.btnOpenSource.Click += new System.EventHandler(this.btnOpenSource_Click);
+            // 
+            // btnOpenDestination
+            // 
+            this.btnOpenDestination.Location = new System.Drawing.Point(816, 27);
+            this.btnOpenDestination.Name = "btnOpenDestination";
+            this.btnOpenDestination.Size = new System.Drawing.Size(48, 23);
+            this.btnOpenDestination.TabIndex = 12;
+            this.btnOpenDestination.Text = "Open";
+            this.btnOpenDestination.UseVisualStyleBackColor = true;
+            this.btnOpenDestination.Click += new System.EventHandler(this.btnOpenDestination_Click);
             // 
             // MainMenu
             // 
@@ -234,6 +258,8 @@
         private System.Windows.Forms.RadioButton rdMove;
         private System.Windows.Forms.RadioButton rdCopy;
         private System.Windows.Forms.GroupBox gBox;
+        private System.Windows.Forms.Button btnOpenDestination;
+        private System.Windows.Forms.Button btnOpenSource;
     }
 }
 

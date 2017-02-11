@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using MovieMover;
+using System.Diagnostics;
 
 namespace MovieMover
 {
@@ -96,6 +97,42 @@ namespace MovieMover
                 btnStart.Enabled = false;
                 gBox.Enabled = false;
                 backgroundWorker1.RunWorkerAsync(new data(txtSource.Text, txtDestination.Text, rdCopy.Checked));
+            }
+        }
+
+        private void btnOpenDestination_Click(object sender, EventArgs e)
+        {
+            if (!backgroundWorker1.IsBusy)
+            {
+                try
+                {
+                    if (txtDestination.Text.Trim() != "")
+                    {
+                        Process.Start(txtDestination.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message + Environment.NewLine + ex.StackTrace);
+                }
+            }
+        }
+
+        private void btnOpenSource_Click(object sender, EventArgs e)
+        {
+            if (!backgroundWorker1.IsBusy)
+            {
+                try
+                {
+                    if (txtSource.Text.Trim() != "")
+                    {
+                        Process.Start(txtSource.Text);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message + Environment.NewLine + ex.StackTrace);
+                }
             }
         }
     }
