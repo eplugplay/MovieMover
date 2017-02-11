@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2C6A3EB99FF84738A43FEC1C3F1ECE58"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_35789B2F54374748A54389E8F60E49CD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -35,12 +29,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_35789B2F54374748A54389E8F60E49CD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2C6A3EB99FF84738A43FEC1C3F1ECE58"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -106,37 +94,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2C6A3EB99FF84738A43FEC1C3F1ECE58"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MovieMover, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_2C6A3EB99FF84738A43FEC1C3F1ECE58"
-                    {
-                    "Name" = "8:MovieMover.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\MovieMover\\bin\\Debug\\MovieMover.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_45F7CF75D15A443BABD08AEF82AF9D11"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AAFC1E5C28114FE6A6DF5BE2CF59EC9A"
             {
             "SourcePath" = "8:..\\MovieMover\\moviemover.ico"
@@ -214,7 +171,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{9F891C31-A032-4A39-BACD-3A97FEEBE84A}"
-        "PackageCode" = "8:{AB290852-7ACC-40D1-882C-58B6517EF0F5}"
+        "PackageCode" = "8:{95053E5B-BF31-4815-A457-E48F6F74DA9F}"
         "UpgradeCode" = "8:{B3EFF1A3-C399-4C82-90D3-27C2B513CD8E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -334,6 +291,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8AE194AF6B594D71B235EF58BA640751"
+            {
+            "Name" = "8:Primary output from MovieMover"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_35789B2F54374748A54389E8F60E49CD"
+            "Folder" = "8:_45F7CF75D15A443BABD08AEF82AF9D11"
+            "WorkingFolder" = "8:_EA4ACEE4B55D4A53B0C8728A008C5521"
+            "Icon" = "8:_AAFC1E5C28114FE6A6DF5BE2CF59EC9A"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
