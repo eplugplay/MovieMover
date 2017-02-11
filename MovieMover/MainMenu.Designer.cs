@@ -44,7 +44,9 @@
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.rdMove = new System.Windows.Forms.RadioButton();
             this.rdCopy = new System.Windows.Forms.RadioButton();
+            this.gBox = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
+            this.gBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -74,7 +76,7 @@
             // lblSource
             // 
             this.lblSource.AutoSize = true;
-            this.lblSource.Location = new System.Drawing.Point(32, 50);
+            this.lblSource.Location = new System.Drawing.Point(12, 22);
             this.lblSource.Name = "lblSource";
             this.lblSource.Size = new System.Drawing.Size(41, 13);
             this.lblSource.TabIndex = 1;
@@ -82,7 +84,7 @@
             // 
             // txtSource
             // 
-            this.txtSource.Location = new System.Drawing.Point(79, 47);
+            this.txtSource.Location = new System.Drawing.Point(59, 19);
             this.txtSource.Name = "txtSource";
             this.txtSource.Size = new System.Drawing.Size(239, 20);
             this.txtSource.TabIndex = 2;
@@ -94,7 +96,7 @@
             // 
             // btnSourceBrowse
             // 
-            this.btnSourceBrowse.Location = new System.Drawing.Point(324, 44);
+            this.btnSourceBrowse.Location = new System.Drawing.Point(304, 16);
             this.btnSourceBrowse.Name = "btnSourceBrowse";
             this.btnSourceBrowse.Size = new System.Drawing.Size(75, 23);
             this.btnSourceBrowse.TabIndex = 3;
@@ -108,7 +110,7 @@
             // 
             // btnDestinationBrowse
             // 
-            this.btnDestinationBrowse.Location = new System.Drawing.Point(803, 45);
+            this.btnDestinationBrowse.Location = new System.Drawing.Point(797, 15);
             this.btnDestinationBrowse.Name = "btnDestinationBrowse";
             this.btnDestinationBrowse.Size = new System.Drawing.Size(75, 23);
             this.btnDestinationBrowse.TabIndex = 6;
@@ -118,7 +120,7 @@
             // 
             // txtDestination
             // 
-            this.txtDestination.Location = new System.Drawing.Point(558, 48);
+            this.txtDestination.Location = new System.Drawing.Point(552, 18);
             this.txtDestination.Name = "txtDestination";
             this.txtDestination.Size = new System.Drawing.Size(239, 20);
             this.txtDestination.TabIndex = 5;
@@ -126,7 +128,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(489, 51);
+            this.label1.Location = new System.Drawing.Point(483, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 4;
@@ -154,7 +156,7 @@
             // rdMove
             // 
             this.rdMove.AutoSize = true;
-            this.rdMove.Location = new System.Drawing.Point(768, 79);
+            this.rdMove.Location = new System.Drawing.Point(765, 45);
             this.rdMove.Name = "rdMove";
             this.rdMove.Size = new System.Drawing.Size(52, 17);
             this.rdMove.TabIndex = 9;
@@ -165,7 +167,7 @@
             // rdCopy
             // 
             this.rdCopy.AutoSize = true;
-            this.rdCopy.Location = new System.Drawing.Point(826, 79);
+            this.rdCopy.Location = new System.Drawing.Point(823, 45);
             this.rdCopy.Name = "rdCopy";
             this.rdCopy.Size = new System.Drawing.Size(49, 17);
             this.rdCopy.TabIndex = 10;
@@ -173,21 +175,30 @@
             this.rdCopy.Text = "Copy";
             this.rdCopy.UseVisualStyleBackColor = true;
             // 
+            // gBox
+            // 
+            this.gBox.Controls.Add(this.txtSource);
+            this.gBox.Controls.Add(this.rdCopy);
+            this.gBox.Controls.Add(this.rdMove);
+            this.gBox.Controls.Add(this.lblSource);
+            this.gBox.Controls.Add(this.btnSourceBrowse);
+            this.gBox.Controls.Add(this.btnDestinationBrowse);
+            this.gBox.Controls.Add(this.label1);
+            this.gBox.Controls.Add(this.txtDestination);
+            this.gBox.Location = new System.Drawing.Point(15, 27);
+            this.gBox.Name = "gBox";
+            this.gBox.Size = new System.Drawing.Size(890, 69);
+            this.gBox.TabIndex = 11;
+            this.gBox.TabStop = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 676);
-            this.Controls.Add(this.rdCopy);
-            this.Controls.Add(this.rdMove);
+            this.Controls.Add(this.gBox);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.btnDestinationBrowse);
-            this.Controls.Add(this.txtDestination);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSourceBrowse);
-            this.Controls.Add(this.txtSource);
-            this.Controls.Add(this.lblSource);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
@@ -197,6 +208,8 @@
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.gBox.ResumeLayout(false);
+            this.gBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,6 +233,7 @@
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.RadioButton rdMove;
         private System.Windows.Forms.RadioButton rdCopy;
+        private System.Windows.Forms.GroupBox gBox;
     }
 }
 

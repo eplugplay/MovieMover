@@ -23,6 +23,7 @@ namespace MovieMover
                 try
                 {
                     string mainFolder = "";
+                    int cntDel = 0;
                     string[] subdirectoryEntries = Directory.GetDirectories(sourcePath, "*", System.IO.SearchOption.TopDirectoryOnly);
                     foreach (var dir in subdirectoryEntries)
                     {
@@ -31,6 +32,7 @@ namespace MovieMover
                         {
                             movieInfo = GetFileInfo(fullpath, sourcePath, destinationPath, logPath, copy);
                             ExecuteMovies(movieInfo, txtMessage, mainFolder);
+                            cntDel++;
                         }
                         string[] subFolders = Directory.GetDirectories(dir, "*", System.IO.SearchOption.AllDirectories);
                         foreach (var subDir in subFolders)
@@ -39,9 +41,17 @@ namespace MovieMover
                             {
                                 movieInfo = GetFileInfo(fullpath, sourcePath, destinationPath, logPath, copy);
                                 ExecuteMovies(movieInfo, txtMessage, mainFolder);
+                                cntDel++;
                             }
                         }
-                        Directory.Delete(dir, true);
+                        if (!movieInfo.copy)
+                        {
+                            if (cntDel > 0)
+                            {
+                                Directory.Delete(dir, true);
+                            }
+                        }
+                        cntDel = 0;
                     }
                 }
                 catch (Exception e)

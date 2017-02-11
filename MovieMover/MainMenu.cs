@@ -52,6 +52,8 @@ namespace MovieMover
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            btnStart.InvokeEx(x => x.Enabled = true);
+            gBox.InvokeEx(x => x.Enabled = true);
             MessageBox.Show("Completed!");
         }
 
@@ -91,6 +93,8 @@ namespace MovieMover
             if (MessageBox.Show("Do you want to start?", "Start Moving Movies?", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 txtMessage.Clear();
+                btnStart.Enabled = false;
+                gBox.Enabled = false;
                 backgroundWorker1.RunWorkerAsync(new data(txtSource.Text, txtDestination.Text, rdCopy.Checked));
             }
         }
