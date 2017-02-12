@@ -12,3 +12,4 @@ C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMove
 C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMover.csproj.GenerateResource.Cache
 C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMover.exe
 C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMover.pdb
+C:\Users\Steve Yi\Documents\GitHub\MovieMover\MovieMover\obj\x86\Debug\MovieMover.csprojResolveAssemblyReference.cache

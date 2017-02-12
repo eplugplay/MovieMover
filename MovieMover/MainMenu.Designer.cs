@@ -45,8 +45,8 @@
             this.rdMove = new System.Windows.Forms.RadioButton();
             this.rdCopy = new System.Windows.Forms.RadioButton();
             this.gBox = new System.Windows.Forms.GroupBox();
-            this.btnOpenSource = new System.Windows.Forms.Button();
             this.btnOpenDestination = new System.Windows.Forms.Button();
+            this.btnOpenSource = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.gBox.SuspendLayout();
             this.SuspendLayout();
@@ -195,16 +195,6 @@
             this.gBox.TabIndex = 11;
             this.gBox.TabStop = false;
             // 
-            // btnOpenSource
-            // 
-            this.btnOpenSource.Location = new System.Drawing.Point(370, 27);
-            this.btnOpenSource.Name = "btnOpenSource";
-            this.btnOpenSource.Size = new System.Drawing.Size(48, 23);
-            this.btnOpenSource.TabIndex = 11;
-            this.btnOpenSource.Text = "Open";
-            this.btnOpenSource.UseVisualStyleBackColor = true;
-            this.btnOpenSource.Click += new System.EventHandler(this.btnOpenSource_Click);
-            // 
             // btnOpenDestination
             // 
             this.btnOpenDestination.Location = new System.Drawing.Point(816, 27);
@@ -214,6 +204,16 @@
             this.btnOpenDestination.Text = "Open";
             this.btnOpenDestination.UseVisualStyleBackColor = true;
             this.btnOpenDestination.Click += new System.EventHandler(this.btnOpenDestination_Click);
+            // 
+            // btnOpenSource
+            // 
+            this.btnOpenSource.Location = new System.Drawing.Point(370, 27);
+            this.btnOpenSource.Name = "btnOpenSource";
+            this.btnOpenSource.Size = new System.Drawing.Size(48, 23);
+            this.btnOpenSource.TabIndex = 11;
+            this.btnOpenSource.Text = "Open";
+            this.btnOpenSource.UseVisualStyleBackColor = true;
+            this.btnOpenSource.Click += new System.EventHandler(this.btnOpenSource_Click);
             // 
             // MainMenu
             // 
@@ -226,6 +226,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
